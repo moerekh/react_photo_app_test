@@ -11,6 +11,9 @@ import {
 import CameraComponent from './components/CameraComponent';
 import HomeComponent from './components/HomeComponent';
 
+// Custom CSS
+import './photo_proto.scss';
+
 function App() {
   return (
     <Router>
