@@ -1,5 +1,7 @@
 @import 'index.css';
 @import 'App.css';
+@import '~bootstrap';
 
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass';
+ul.nav li{
+    display: inline-block;
+}

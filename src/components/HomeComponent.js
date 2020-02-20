@@ -7,7 +7,13 @@ export default class HomeComponent extends React.Component {
     render() {
       return(
         <main>
-            <h1>Home Page</h1>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <h1>Home Page</h1>
+              </div>
+            </div>
+          </div>
         </main>
       )
     }

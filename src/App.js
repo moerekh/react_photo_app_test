@@ -17,20 +17,14 @@ import './photo_proto.scss';
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/camera">Camera</Link>
-            </li>
-            {/* <li>
-              <Link to="/about">About</Link>
-            </li> */}
-          </ul>
-        </nav>
+      <ul>
+        <li>
+          <Link to="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></Link>
+        </li>
+        <li>
+          <Link to="/camera"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></Link>
+        </li>
+      </ul>
 
       <Switch>
         {/* <Route path="/about">
@@ -43,8 +37,7 @@ function App() {
           <CameraComponent></CameraComponent>
         </Route>
       </Switch>
-    </div>
-  </Router>
+    </Router>
   );
 }
 
