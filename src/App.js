@@ -10,6 +10,7 @@ import {
 // Other pages or components
 import CameraComponent from './components/CameraComponent';
 import HomeComponent from './components/HomeComponent';
+import NavbarComponent from './components/NavbarComponent';
 
 // Custom CSS
 import './photo_proto.scss';
@@ -18,10 +19,10 @@ function App() {
   return (
     <Router>
       
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/camera">Camera</Link></li>
-      </ul>
+      <NavbarComponent>
+        <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+        <li className="nav-item"><Link to="/camera" className="nav-link">Camera</Link></li>
+      </NavbarComponent>
 
       <Switch>
         <Route exact path="/" component={HomeComponent}></Route>
