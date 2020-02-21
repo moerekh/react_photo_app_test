@@ -1,5 +1,5 @@
 import React from 'react';
-import Webcam from "react-webcam";
+import WebCameraComponent from './WebCameraComponent';
 
 export default class CameraComponent extends React.Component {
     render() {
@@ -9,7 +9,9 @@ export default class CameraComponent extends React.Component {
             <div className="row">
               <div className="col">
                 <h1>Camera Component</h1>
-                <Webcam />
+                <WebCameraComponent 
+                  width="100%"
+                />
               </div>
             </div>
           </div>
