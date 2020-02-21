@@ -17,25 +17,15 @@ import './photo_proto.scss';
 function App() {
   return (
     <Router>
+      
       <ul>
-        <li>
-          <Link to="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></Link>
-        </li>
-        <li>
-          <Link to="/camera"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></Link>
-        </li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/camera">Camera</Link></li>
       </ul>
 
       <Switch>
-        {/* <Route path="/about">
-          <About />
-        </Route> */}
-        <Route exact path="/">
-          <HomeComponent />
-        </Route>
-        <Route exact path="/camera">
-          <CameraComponent></CameraComponent>
-        </Route>
+        <Route exact path="/" component={HomeComponent}></Route>
+        <Route exact path="/camera" component={CameraComponent}></Route>
       </Switch>
     </Router>
   );

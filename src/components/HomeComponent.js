@@ -9,8 +9,8 @@ export default class HomeComponent extends React.Component {
         <main>
           <div className="container">
             <div className="row">
-              <div className="col-sm-12">
-                <h1>Home Page</h1>
+              <div className="col">
+                <h1>Home Component</h1>
               </div>
             </div>
           </div>
