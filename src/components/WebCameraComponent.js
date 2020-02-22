@@ -1,33 +1,50 @@
-import React from "react";
+import React, { useCallback, useRef } from "react";
 import Webcam from "react-webcam";
 
 const videoConstraints = {
-    width: 1080,
-    height: 720,
+    width: 800,
+    height: 600,
     facingMode: "user"
 };
    
 const WebcamCapture = () => {
-  const webcamRef = React.useRef(null);
+  const webcamRef = useRef(null);
 
-  const capture = React.useCallback(
+  const capture = useCallback(
       () => {
       const imageSrc = webcamRef.current.getScreenshot();
+      let photo_frame = document.querySelector('#myimage');
+        let photo = document.createElement('img');
+        photo.src = imageSrc;
+        photo_frame.append(photo);
       },
       [webcamRef]
   );
 
   return (
     <>
-      <Webcam
-        audio={false}
-        height={720}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={1280}
-        videoConstraints={videoConstraints}
-        />
-        <button onClick={capture}>Capture photo</button>
+      <div className="row">
+        <div className="col">
+          <div id="myimage"></div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Webcam
+            audio={false}
+            height={600}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            width={800}
+            videoConstraints={videoConstraints}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+          <button className="btn btn-primary" onClick={capture}>Capture photo</button>
+          </div>
+        </div>
     </>
   );
 };

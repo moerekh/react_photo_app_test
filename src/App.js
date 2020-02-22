@@ -19,7 +19,7 @@ function App() {
     <Router>
       
       <NavbarComponent>
-        <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+        <li className="nav-item"><Link to="/" className="nav-link"><span className="bi bi-house"></span>Home</Link></li>
         <li className="nav-item"><Link to="/camera" className="nav-link">Camera</Link></li>
       </NavbarComponent>
 

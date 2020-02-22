@@ -2,6 +2,55 @@
 @import 'App.css';
 @import '~bootstrap';
 
-ul.nav li{
+// Color Scheme
+$color_one: #50514F;
+$color_two: #F25F5C;
+$color_three: #FFE066;
+$color_four: #247BA0;
+$color_five: #70C1B3;
+
+// Custom color assignments
+$bg_color: $color_one;
+
+// Changing default styles
+[class$="primary"] {
+    background-color: $color_four;
+    border-color: $color_four;
+}
+
+[class$="danger"] {
+    background-color: $color_two;
+    border-color: $color_two;
+}
+
+[class$="warning"] {
+    background-color: $color_three;
+    border-color: $color_three;
+}
+
+[class$="success"] {
+    background-color: $color_five;
+    border-color: $color_five;
+}
+
+.bg-dark {
+    background-color: darken($color: $bg_color, $amount: 10) !important;
+}
+
+.bi::before {
     display: inline-block;
+    content: "";
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+main {
+    background-color: $bg_color;
+    height: 90vh;
+    overflow: scroll;
+}
+
+#main_navigation {
+    height: 10vh;
 }
